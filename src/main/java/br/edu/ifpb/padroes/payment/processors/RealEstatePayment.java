@@ -9,6 +9,8 @@ public class RealEstatePayment extends PaymentProcessor {
     public void process(Property property) {
         double realStateComission = property.getPrice()*0.10;
         System.out.println(String.format("Pay %f for real state", realStateComission));
+
+        checkNext(property);
     }
 }
 
